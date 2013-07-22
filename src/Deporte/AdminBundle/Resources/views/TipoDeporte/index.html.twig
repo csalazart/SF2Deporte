@@ -1,0 +1,12 @@
+{% extends "YepsuaGeneratorBundle::layout.html.twig" %}
+{% block crud_content %}
+  
+  {{ component_render(grid) }}
+  <div id="tipodeporteWorkspace"></div>
+  
+  {% remote_command update="#tipodeporteWorkspace" type="GET" 
+                    beforeSend=js_function("return SmarTwig.grid.hasSelectedRow('#tipodeporteGrid','Please select a row')")
+                    url=arg(path('lstdeporte_show', { "id": "'+ SmarTwig.grid.selectedRow('#tipodeporteGrid')+'"}) | raw_url_decode)  
+                    name="rcShowTipodeporte" %}
+                          
+{% endblock crud_content %}

@@ -1,0 +1,163 @@
+{# src/Deporte/Atletas/Resources/views/Panel/panel.html.tiwg #}
+{% extends '::base.html.twig' %} {# extendemos del layout por defecto #}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('deporte/css/style.css') }} " type="text/css" /> 
+    {% include 'AtletasBundle:yepsua:yepsuaUICore.html.twig' %} 
+    {% include  '::bootstrap.html.twig' %} 
+{% endblock %}
+
+{% block javascripts %}
+      {# {% include 'YepsuaSmarTwigBundle::smartwigAssets.html.twig' %} #}
+     {# {{ parent() }} #}
+{% endblock %}
+    
+{% block body %}    
+<div id="panel" class="container-fluid" >
+    <div class="row-fluid" > 
+       <div id="header" class="span12" >
+            <h2>  SISTEMA DE REGISTRO DE ATLETAS   </h2>
+            <h4> Departamento de Deportes<br/> Universidad de Oriente N&uacute;cleo de Anzo&aacute;tegui.</h4>
+       </div>
+    </div>        
+     <div class="row-fluid " >    
+       <div id="menu" class="span6 offset3" >
+            {# Menu del Panel #}   
+            {% include 'AtletasBundle:Panel:menu.html.twig' %} 
+       </div> 
+      </div>       
+       <div class="row-fluid" > 
+            <div id="content" class="span12" >
+                {# <?php include($pag.'.php');?> #}
+               {% block content %} {%endblock%}         
+            </div>
+        </div>          
+</div> 
+    
+{% endblock %}
+
+{# 
+ <?php
+    $op=isset($_GET['op'])? $_GET['op']:'0';
+     switch ($op) {
+            case '0':
+                $pag='Pmain';
+             break;
+			 
+               case 'addaca': //Datos Academicos
+                   $pag='dat_acad';
+                break;
+				   
+             case 'addmed': //Datos medicos
+                   $pag='dat_med';
+               break;
+				   
+             case 'addper': //Datos personales
+                   $pag='dat_person';
+             break;  
+	       case 'viewp': //Datos personales
+                   $pag='view_person';
+                break;  	 
+		case 'lstatl': // Listado de Atletas
+			$pag='LstAtletas';
+		break;
+		case	'editp': //Editar datos Personales
+			$pag='edit_person';
+		break;
+	 		 //************** Participación *****************************
+		case 'addpar': //Datos de Participacion
+                   $pag='dat_part';
+                break;  
+			
+			case 'addcp':
+				$pag='addcpart';
+			break;	
+			//**************** Marcas **************
+			case 'addmark': // Agregar Marcas al Atleta
+			     $pag='addmark';
+			break;	
+			
+			case 'edmark': //Editar marcas del Atleta
+			     $pag='editmark';
+			break;	
+			
+			case 'lstpar': //Listado de Apletas de Participacion
+                          $pag='lstparticipa';
+                        break; 
+			/***************************************/	 	
+			
+                    case 'admin': //administracion
+                         $pag='admin';
+                     break;   
+
+                        case	'edita': // Editar Datos academicos
+                                        $pag='edit_acad';
+                        break;			        
+                        case	'editm': // Editar Datos Medicos
+                                        $pag='edit_med';
+                        break;
+                                        // Datos del sistema 
+                        //CARGO	
+                        case 'lstcargo':    // tipo de Cargo
+                                        $pag='lstCargo';
+                        break;
+                        case 'editcargo':
+                                $pag='edit_cargo';
+                        break;
+                        case 'addcargo':
+                                $pag='new_cargo';
+                        break;
+                        //DEPORTE
+                        case 'lstdep':  // Tipo de Deporte
+                                        $pag='lstDeporte';
+                        break;
+                        case 'editdep':  // Tipo de Deporte
+                                        $pag='edit_Deporte';
+                        break;
+                        case 'adddep':  // Tipo de Deporte
+                                        $pag='add_Deporte';
+                        break;
+			
+			// TIPOS DE MODALIDAD
+			case 'lstmod':  // Listado tipo de Modalidad
+					$pag='lstModalidad';
+			break;
+			case 'editmod':  // editar tipo de Modalidad
+					$pag='edit_Modalidad';
+			break;
+			case 'addmod':  // agregar tipo de Modalidad
+					$pag='add_Modalidad';
+			break;
+			//SELECCION
+			case 'lstsel': // tipo de Seleccion
+					$pag='lstSeleccion';
+			break;
+			case 'editsel': // tipo de Seleccion
+					$pag='edit_Seleccion';
+			break;
+			case 'addsel': // tipo de Seleccion
+					$pag='add_Seleccion';
+			break;
+			
+			case 'lstuser':  // Listado de usuarios
+					$pag='lstusuarios';
+			break;
+			
+			/********************* Buscadores ***********************/
+			case 'srcatlci':  // Buscar por Atleta CI
+					$pag='srchaltId';
+			break;
+			case 'srcatln':  // Buscar por Atleta Nombre / apellido
+					$pag='srchaltNomb';
+			break;
+			case 'srcdep':  // Buscar por deporte
+					$pag='srchdeporte';
+			break;
+			case 'srcmod':  // Buscar por modalidad
+					$pag='srchmodalidad';
+			break;
+			
+        }      
+    ?>
+#}
+    

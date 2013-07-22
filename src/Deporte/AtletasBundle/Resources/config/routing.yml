@@ -1,0 +1,4 @@
+atletas_panel:
+    pattern:  /panel
+    defaults: { _controller: AtletasBundle:Panel:index }
+

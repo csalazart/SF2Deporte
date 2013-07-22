@@ -1,0 +1,22 @@
+{# src/Deporte/Atletas/Resources/views/Login/login.html.tiwg #}
+{% extends '::base.html.twig' %} {# extendemos del layout por defecto #}
+{% block title %}- Login{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('deporte/css/style.css') }} " type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+      {#{% include 'AtletasBundle:yepsua:yepsuaUICore.html.tiwg' %} #}
+{% endblock %}
+
+{% block body %}
+  <div id="header">
+      <h2>  SISTEMA DE REGISTRO DE ATLETAS   </h2>
+      <h4> Departamento de Deportes<br/> Universidad de Oriente N&uacute;cleo de Anzo&aacute;tegui.</h4>
+  </div>
+  <div id="content">
+     {#  <?php include('login.php');?> #}
+     {% block content %} {%endblock%}  
+  </div>
+
+{% endblock %}    

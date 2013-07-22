@@ -1,0 +1,22 @@
+{# src/Deporte/Atletas/Resources/views/layout.html.tiwg #}
+{% extends '::base.html.twig' %} {# extendemos del layout por defecto #}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('deporte/css/style.css') }} " type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+      {% include 'AtletasBundle:yepsua:yepsuaUICore.html.tiwg' %}
+     {# {% include 'YepsuaSmarTwigBundle::smartwigAssets.html.twig' %} #}
+{% endblock %}
+
+{% block body %}
+  <div id="header">
+   {# <?php include('title.php');?> #}
+   {% block header %} {%endblock%}  
+  </div>
+  <div id="content">
+     {#  <?php include('login.php');?> #}
+     {% block content %} {%endblock%}  
+  </div>
+
+{% endblock %}    

@@ -1,0 +1,16 @@
+{% extends "AtletasBundle:Panel:panel.html.twig" %}
+{% block content %}  
+
+<div class="title center"> <h2>Editar - Deporte</h2>
+</div>
+<div class="content-table center">
+<form id="eddep" name="eddep" method="POST" action="{{path ('admin_deporte_edit',{'id':rowDeporte.id})}}">
+Deporte:
+<input name="deporte" type="text" id="deporte" value="{{rowDeporte.deporte}}" size="40" maxlength="200">
+  <input name="id" type="hidden" id="id" value="{{rowDeporte.id}}">
+  <div id="form-boton">
+    <input name="enviar" type="submit" value="Modificar"/>
+  </div>
+</form>
+</div>
+{%endblock%}

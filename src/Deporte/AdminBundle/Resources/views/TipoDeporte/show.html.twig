@@ -1,0 +1,17 @@
+{% ui_dialog widgetVar="dlgShowTipoDeporte" title="TipoDeporte show" modal="true"
+             close=js_function('$(this).dialog( "destroy" );$(this).remove();') %}
+
+  <table class="record_properties">
+    <tbody>
+      <tr>
+        <td><b>Id:</b></td>
+        <td>{{ entity.id }}</td>
+      </tr>
+      <tr>
+        <td><b>Deporte:</b></td>
+        <td>{{ entity.deporte }}</td>
+      </tr>      
+    </tbody>
+  </table>
+    
+{% end_ui_dialog %}

@@ -1,0 +1,56 @@
+{% extends "AtletasBundle:Panel:panel.html.twig" %}
+{% block content %}    
+    <div id="header" class="title"> <h2>Listado de Deportes</h2> </div>
+    <div id="navstat" class="left">    
+        Mostrando:  
+     {# finla 1 #} hasta {# Fila Ultima #} de {# total #} 
+        <div class="left"> Nuevo: <a href="{{path('admin_deporte_add')}} " class="left icon-plus-sign" title="Agregar Nuevo"> &nbsp;  </a> 
+        </div>
+    </div>
+     {# panel.php?op=adddep#}
+
+    <table width="463" class="table table-hover " >
+     <thead> 
+       <tr>
+        <th width="96">ID</th>
+        <th width="244">Deporte</th>
+        <th width="109">Acciones</th>
+      </tr>
+     </thead> 
+      {% for rowDeporte in Deportes %}
+        <tr>
+          <td align="center">{{rowDeporte.id}}</td>
+          <td align="left">{{ rowDeporte.deporte | capitalize }}</td>
+          <td align="center">
+              <a href="{{path('admin_deporte_edit',{'id':rowDeporte.id})}} " class="icon-pencil " title="Editar">&nbsp;</a> {#panel.php?op=editdep&id=<?php echo $row_RsDeporte['id']; ?>#}
+              <span class="" >&nbsp;</span>
+              <a href="{{path('admin_deporte_del',{'id':rowDeporte.id})}} " class="icon-trash" title="Eliminar">&nbsp;</a></td> {#del_deporte.php?id=<?php echo $row_RsDeporte['id']; ?>#}
+        </tr>
+     {% endfor %}
+    </table>
+    <br>
+    <div id="navpage">
+      <table border="0">
+        <tr>
+          <td>
+             {# // Show if not first page #}
+              <a href="#"><img src="{{asset('deporte/img/First.gif')}}" border="0" /></a>
+              {# // Show if not first page #}
+          </td>
+          <td>{# // Show if not first page #}
+              <a href="#"><img src="{{asset('deporte/img/Previous.gif')}}" border="0" /></a>
+              {# // Show if not first page#}
+          </td>
+          <td>{# // Show if not last page #}
+              <a href="#"><img src="{{asset('deporte/img/Next.gif')}}" border="0" /></a>
+              {# // Show if not last page #}
+          </td>
+          <td>{# // Show if not last page #}
+              <a href=""><img src="{{asset('deporte/img/Last.gif')}}" border="0" /></a>
+              {# // Show if not last page #}
+          </td>
+        </tr>
+      </table>
+    </div>
+
+{%endblock%}  

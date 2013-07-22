@@ -1,0 +1,7 @@
+parameters:
+#    atletas.example.class: Deporte\AtletasBundle\Example
+
+services:
+#    atletas.example:
+#        class: %atletas.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

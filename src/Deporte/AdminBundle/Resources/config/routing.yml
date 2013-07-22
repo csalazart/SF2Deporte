@@ -1,0 +1,56 @@
+admin_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AdminBundle:Default:index }
+
+demo_form:
+    pattern: /pruebaform
+    defaults: { _controller: AdminBundle:Demo:index }
+    
+login_form:
+    pattern: /loginform
+    defaults: { _controller: AdminBundle:Demo:login }    
+
+admin_usuarios:
+    pattern: /usuarios
+    defaults: { _controller: AtletasBundle:Panel:index }
+    
+admin_deporte:
+    pattern: /deporte
+    defaults: { _controller: AdminBundle:Deporte:index }
+
+admin_deporte_add: 
+    pattern: /deporte/add
+    defaults: { _controller: AdminBundle:Deporte:new }
+
+admin_deporte_edit:
+    pattern: /deporte/edit/{id}
+    defaults: { _controller: AdminBundle:Deporte:edit }
+
+    
+admin_deporte_del:
+    pattern: /deporte/del/{id}
+    defaults: { _controller: AdminBundle:Deporte:del }
+
+admin_modalidad:
+    pattern: /modalidad
+    defaults: { _controller: AtletasBundle:Panel:index }
+
+admin_seleccion:  
+    pattern: /seleccion
+    defaults: { _controller: AtletasBundle:Panel:index }
+
+
+
+
+lstdeporte:
+    pattern: /deporte/lst
+    defaults: { _controller: AdminBundle:TipoDeporte:index }
+    
+lstdeporte_data:
+    pattern: /deporte/data
+    defaults: { _controller: AdminBundle:TipoDeporte:data }
+ 
+lstdeporte_show:
+    pattern: /deporte/{id}
+    defaults: { _controller: AdminBundle:TipoDeporte:show }
+    
