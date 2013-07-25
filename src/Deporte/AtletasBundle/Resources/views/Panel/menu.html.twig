@@ -1,8 +1,8 @@
-
+<div class="navbar-inner">
 <ul id="mainmenu" class="nav nav-tabs">
-    <li><a href="{{path('atletas_panel')}}" id="home">Inicio</a></li>
+    {#<li><a href="{{path('atletas_panel')}}" id="home">Inicio</a></li>#}
     <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><span>Administraci&oacute;n de Datos<b class="caret"></b></span></a>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><span>Administraci&oacute;n <b class="caret"></b></span></a>
         <ul class="dropdown-menu"> 
               <li><a href="{{path('admin_usuarios')}}" id="admuser">Usuarios</a></li>
               <li><a href="{{path('admin_deporte')}}" id="admdep">Deporte </a></li>            {#panel.php?op=lstdep#}
@@ -10,6 +10,7 @@
               <li><a href="{{path('admin_seleccion')}}" id="admsel">Selecci&oacute;n</a></li>  {#panel.php?op=lstsel#}
          </ul>
     </li>
+    <li><a href="#" id=""></a></li> 
    <li class="dropdown">
        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Atletas<b class="caret"></b></span> </a>
        <ul class="dropdown-menu">
@@ -18,8 +19,9 @@
        <li><a href="{{path('atletas_panel')}}" id="paratl">Participaci&oacute;n </a> </li> {# panel.php?op=lstpar#}
        </ul>
   </li>
+  <li><a href="#" id=""></a></li> 
   <li class="dropdown"> 
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span> Buscar</span> </a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span> Buscar<b class="caret"></b></span> </a>
 	 <ul class="dropdown-menu">
          <li><a href="{{path('atletas_panel')}}" id="srchatlci">Por Atleta CI</a></li> {# panel.php?op=srcatlci #}
          <li><a href="{{path('atletas_panel')}}" id="srchatln">Por Atleta Nombre/Apellido</a></li> {# panel.php?op=srcatln #}
@@ -27,5 +29,13 @@
          <li><a href="{{path('atletas_panel')}}" id="srchmod">Por Modalidad</a></li>  {# panel.php?op=srcmod #}
   	</ul>
    </li> 
-    <li><a href="{{path('atletas_panel')}}" id="sclose">Cerrar Sesi&oacute;n</a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    <li><a href="#" id=""></a></li> {# logout.php#}
+    
+    <li><a href="{{path('atletas_panel')}}" id="sclose">Salir</a></li> {# logout.php#}
 </ul>
+</div>

@@ -40,8 +40,6 @@ admin_seleccion:
     defaults: { _controller: AtletasBundle:Panel:index }
 
 
-
-
 lstdeporte:
     pattern: /deporte/lst
     defaults: { _controller: AdminBundle:TipoDeporte:index }
